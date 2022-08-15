@@ -1,0 +1,423 @@
+
+html{
+   font-size: 62.5%;
+}
+*,*::after,*::before{
+   margin: 0%;
+   padding: 0%;
+   box-sizing: border-box;
+   list-style: none;
+   font-family: sans-serif;
+}
+:root{
+   --primaryColor-- : rgb(228, 245, 240);
+   --secendryColor-- : rgb(255, 255, 255);
+}
+body{
+   width: 100vw;
+   height: 100vh;
+ 
+}
+
+#Screen{
+   position: relative;
+   width: 100vw;
+   height: 120vh;
+   background-color: var(--primaryColor--);
+   display: grid;
+  grid-template-areas: 
+  "LEFT MID MID RIGHT"
+  ;
+}
+#Screen > *{
+   width: 100%;
+   height: 100%;
+   
+}
+
+#Left_Side{
+   
+   background-color: var(--secendryColor--);
+  
+}
+#Mid_Side{
+   background: transparent;
+   
+   border-right: 2px solid red;
+}
+#Right_Side{
+   
+   background: transparent;
+   
+}
+
+
+/* ================   LEFT SIDE  */
+#Left_Side{
+grid-template-rows: 1fr 3fr 1fr;
+}
+#Left_Side> *{
+   width: 90%;
+  
+}
+#Header_Wrapper{
+  
+   border-bottom: 2px solid Black;
+   height: 20%;
+
+   display: grid;
+   grid-template-rows: 1fr 1fr;
+}
+#Loeading_BTN_wrapper{
+   border-bottom: 2px solid red;
+   display: flex;
+   align-items: center;
+   flex-direction: row;
+   justify-content: flex-end;
+}
+#Left_Side_Close_BTN{
+   /* background-color: aquamarine; */
+   float: right;
+   
+}
+#App_Name_Wrapper{
+   display: flex;
+   align-items: center;
+   flex-direction: row;
+   margin-bottom: 2rem;
+}
+#App_Name_Wrapper_H3{
+   display: inline-block;
+   font-family: sans-serif;
+   font-size: clamp(1.3rem, .1rem + 2.33333vw, 7rem);;
+}
+
+#Left_Info_Wrapper{
+  
+   border-bottom: 2px solid Black;
+   height: 65%;
+  display: grid;
+  grid-template-rows: 1fr .1fr 1fr .1fr 1fr;
+  gap: .5rem;
+}
+#Left_Info_Wrapper> *{
+   
+   width: 100%;
+   height: 100%;
+   display: inline-block;
+
+
+}
+#Home_Trand_Feed_Wrapper{
+/* background-color: aquamarine; */
+}
+#First_Ul_OF_Left{
+background-color: rgb(231, 255, 247);
+/* background-color: transparent; */
+
+ 
+}
+
+.Discover_Smae_Font_Size{
+   font-size:clamp(.6rem , .4rem + 1vw , 3rem);;
+   font-weight: bold;
+   padding-block: .5rem;
+}
+
+#NEWS_Clender_Events_Wrapper{
+   background-color: rgb(231, 255, 247);
+  
+}
+
+#FavSong_Artist_Albem_Wrapper{
+  background-color: rgb(231, 255, 247);
+   
+}
+
+.Same_Left_Ul{
+   display: grid;
+   grid-template-rows: 1fr 1fr 1fr;
+   width: 100%;
+   height: 100%;
+   border-bottom: 2px solid red;
+}
+.Same_Class_Left_lis{
+  
+   border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  font-size: clamp(1rem, 0.5rem + 1.3333vw, 5rem);
+  padding-left: .5rem;
+  font-weight: bold;
+  position: relative;
+  color : #868686;
+}
+.Same_Class_Left_lis:hover{
+   
+   background-color: rgb(18, 13, 28);
+   color: rgb(225, 221, 221);
+}
+.Same_Class_Left_lis:hover.Same_Class_Left_lis::after{
+   content: "";
+   position: absolute;
+   z-index: 1;
+   background-color: rgb(18, 13, 28);
+  
+   width: .2rem;
+   height: 100%;
+   right: -5%;
+}
+#UserInfo_Wrapper{
+  
+  /* border-top: 2px solid rgb(188, 19, 19); */
+  height: 15%;
+  
+}
+#UserName_Wrapper{
+   
+   border-inline: 2px solid black;
+   width: 100%;
+   height: 100%;
+   display: flex;
+   gap: .5rem;
+   justify-content: center;
+}
+#UserName_Wrapper > *{
+   margin-block: auto;
+   font-size: clamp(1rem, 0.5rem + 1.3333vw, 5rem);
+}
+#Showcase_UserName_Info{
+   width: clamp(1.5rem, 1.5rem + 2vw , 5.5rem);
+   height: clamp(1.5rem, 1.5rem + 2vw , 5.5rem);
+   border: none;
+   border-radius: 50%;
+   font-size: clamp(.4rem, .6rem + 1vw , 3rem);
+  
+}
+
+/* =================Mid_Side */
+
+#Mid_Side{
+   
+   background: aqua;
+  
+}
+#Opning_BTN_wrapper{
+   display: flex;
+   width: 100%;
+   height: 10%;
+   /* justify-content: center; */
+   align-items: center;
+   background-color: aquamarine;
+   justify-content: space-around;
+  
+}
+
+#Opning_BTN_wrapper > #Left_Side_Open_BTN{
+   display: none;
+   
+}
+#search_Wrapper{
+   width: 65%;
+   height: 80%;
+   /* float: right; */
+   background-color: aliceblue;
+   display: flex;
+   /* justify-content: center; */
+   align-items: center;
+}
+#search_Wrapper > #search_Inp{
+   height: 100%;
+    width: 100%;
+    font-size: clamp(1rem, .4rem + 1vw , 4rem);
+}
+ #search_Submit_BTN{
+   height: 100%;
+}
+.NO > #Mid_Side > .C > #Opning_BTN_wrapper > #search_Wrapper{
+   width: 100%;
+}
+#Songs_Recommend_Envirment{
+   width: 100%;
+   height: auto;
+   display: flex;
+   flex-direction: column;
+   background-color: rgb(137, 137, 212);
+   overflow-x: scroll;
+}
+#Songs_List_Title{
+   font-size:clamp(1.3rem, .1rem + 2.33333vw, 7rem);
+   padding: 1.5rem;
+}
+#Songs_Headline {
+   font-family: arial, sans-serif;
+   border-collapse: collapse;
+   width: 100%;
+ }
+ 
+ td, th {
+   border: 1px solid #dddddd;
+   text-align: left;
+   padding: 8px;
+ }
+ .Songs_Headline_Same_Font_Size{
+   font-size: clamp(1rem, .4rem + 1vw , 4rem);
+ }
+ tr:nth-child(even) {
+   background-color: #dddddd;
+ }
+ .SONG_INFOS_Same_Font_Size{
+   font-size: clamp(.5rem, 1rem + 1.3333vw, 3rem);
+ }
+
+/* #Main_Mid{
+   width: 1;
+   height: 100%;
+   background-color: cadetblue;
+} */
+
+
+#Right_Side > .C{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+
+}
+#Shortcut_Tag_Wrapper{
+   display: flex;
+   justify-content: space-between;
+   flex-direction: column;
+}
+
+#Shortcut_h1{
+  display: inline-block;
+  width: 100%;
+  height: 15%;
+  font-size: clamp(1.3rem, .1rem + 2.33333vw, 7rem);
+  margin-top: 2%;
+}
+#Tag_ul{
+   width: 100%;
+   height: 80%;
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: row;
+    align-content: space-evenly;
+    justify-content: space-between;
+}
+#Tag_ul > .Same_Tag_Class{
+   font-size:clamp(.7rem, 0.4rem + 1.3333vw, 7rem);
+   height: min-content;
+   font-weight: bold;
+   padding: 3%;
+   background-color: whitesmoke;
+   border-collapse: collapse;
+   border-radius: 30%;
+   display: flex;
+   align-items: center;
+}
+#Tag_ul > .Same_Tag_Class > .Same_Tag_li_img{
+   width: clamp(1rem , 1rem + 1.3333vw, 7rem);
+   height: clamp(1rem , 1rem + 1.3333vw, 7rem);
+}
+
+#fav_Artist_Wrapper{
+   display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+#fav_Artist_Name_a {
+   display: inline-block;
+   width: 100%;
+   height: 15%;
+   font-size: clamp(1.3rem, .1rem + 2.33333vw, 7rem);
+   text-decoration: none;
+  
+}
+#fav_Artist_Name_a:hover{
+   cursor: pointer;
+   color: blue;
+}
+#fav_Artist_div{
+   width: 100%;
+    height: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+#fav_Artist_div > .fav_Artist_info_Wrapper{
+  
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-between;
+ 
+    height: 20%;
+}
+.fav_Artist_IMG{
+    width: clamp(1rem , 1rem + 1.3333vw, 7rem);
+    height: clamp(1rem , 1rem + 1.3333vw, 7rem);
+    border-radius: 50%;
+    background-color: black;
+   }
+
+.fav_Artist_Name{
+   width: 70%;
+   font-size: clamp(1rem, .4rem + 1vw , 4rem);
+   text-decoration: none;
+}
+.fav_Artist_Delete_btn{
+   
+  width: 10%;
+   font-size: clamp(1rem, .4rem + 1vw , 4rem);
+   font-weight: bolder;
+   text-align: center;
+}
+.fav_Artist_Name:hover, .fav_Artist_Delete_btn:hover{
+   cursor: pointer;
+   color: blue;
+}
+ 
+
+/* ================================================================================================================================= */
+/* ================================================================================================================================= */
+/* ================================================================================================================================= */
+*,*::after*::before{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    
+ }
+ body{
+    width: 100%;
+    height: 100vh;
+    margin: 0%;
+ }
+
+ #Screen{
+      width: 100%;
+      height: 100%;
+      display: grid;
+      grid-template-columns:1.5fr 5fr 2.5fr;
+      border: 2px solid red;
+     overflow-x: scroll;
+    }
+    /* for Left_Side , Mid_Side ,Right_Side*/
+    #Screen > *{
+    
+    width: 100%;
+    height: 100%;
+    border: 2px solid black;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content:center ;
+    
+ }
+ .C{
+    width: 90%;
+    height: 100%;
+    background-color: aquamarine;
+ }
+
+
+
