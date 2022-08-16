@@ -35,7 +35,10 @@ function search_Value(){
 
 
 //=======================================================================
-/* let URL_LINK = [];
+
+  let URL_LINK=[];
+  
+ 
 
 // Locatin   // latitude // longitude
 const Location = {
@@ -57,7 +60,7 @@ fetch('https://find-any-ip-address-or-domain-location-world-wide.p.rapidapi.com/
                        	method: 'GET',
                        	headers: {
                        		'X-RapidAPI-Key': '80878a924amshac9807be2633669p16bf90jsn7b32fc7488bc',
-                       		'X-RapidAPI-Host': 'rapidweather.p.rapidapi.com'
+                       		'X-RapidAPI-Host': 'weatherbit-v1-mashape.p.rapidapi.com'
                        	}
                        };
                        
@@ -83,7 +86,7 @@ fetch('https://find-any-ip-address-or-domain-location-world-wide.p.rapidapi.com/
                          fetch(`https://spotify23.p.rapidapi.com/search/?q=${response.data[0].weather.description}&type=multi&offset=0&limit=10&numberOfTopResults=5`, Music)
                          	.then(response => response.json())
                          	.then(response => {
-                                     console.log(response);
+                                     //console.log(response);
                                          console.log(response.tracks);
                                          for (let key in response.tracks) {
                                            let TRACKS= response.tracks[key] ;
@@ -99,8 +102,8 @@ fetch('https://find-any-ip-address-or-domain-location-world-wide.p.rapidapi.com/
                                                     let song_Duration_Minutes = Number((song_Duration_Milliseconds / 60000).toFixed(2));
                                                    
 
-                                                   OBJ = {
-                                                       SONGS:{ 
+                                                   
+                                                      let SONGS={ 
                                                                SONG_LINK: TRACKS2[key3].uri,
                                                                SONG_NAME: TRACKS2[key3].name,
                                                                SONG_DURATION: song_Duration_Minutes,
@@ -109,8 +112,8 @@ fetch('https://find-any-ip-address-or-domain-location-world-wide.p.rapidapi.com/
                                                                SONG_ALBUM_LINK: TRACKS2[key3].albumOfTrack["uri"],
                                                                SONG_ALBUM_NAME: TRACKS2[key3].albumOfTrack["name"],
                                                              }
-                                                    }
-                                                  URL_LINK.push(OBJ) ;
+                                                             URL_LINK.push(SONGS);
+                                                 
                                                    
                                                 }
 
@@ -140,4 +143,39 @@ fetch('https://find-any-ip-address-or-domain-location-world-wide.p.rapidapi.com/
 .catch(err => console.error(err));  // Last Line OF Locatin
 
 //============================================================================
-console.log(URL_LINK);  */
+setTimeout(() => {
+  
+  function trye() {
+    let URL_LINK2 = [];
+    //console.log(URL_LINK);
+    URL_LINK2.push(URL_LINK);
+    console.log(URL_LINK2); 
+    let tbody = document.querySelector("tbody");
+    let tr;
+   
+
+     URL_LINK2.forEach((element) => {
+       element.forEach((element2,index) => {
+         
+         
+         tr += 
+           
+        ` <tr class="SONG_INFOS">  
+            <td class="Songs_Title_Wrapper"> <a class="Songs_Title SONG_INFOS_Same_Font_Size" href="${element2["SONG_LINK"]}">${element2["SONG_NAME"]}</a> </td>
+            <td class="Songs_Time_Wrapper SONG_INFOS_Same_Font_Size">${element2["SONG_DURATION"]}</td>
+            <td class="Songs_Albums_Wrapper"> <a class="Songs_Albums SONG_INFOS_Same_Font_Size" href="${element2["SONG_ALBUM_LINK"]}">${element2["SONG_ALBUM_NAME"]}</a></td>
+            <td class="Songs_Artist_Wrapper"> <a class="Songs_Artist SONG_INFOS_Same_Font_Size" href="${element2["SONG_ARTIST_LINK"]}">${element2["SONG_ARTIST_NAME"]}</a></td>
+          </tr>  
+        `
+
+        
+
+      });
+      tbody.innerHTML+=(tr);
+   });
+     
+    
+  };
+  return trye();
+}, 5000);
+
