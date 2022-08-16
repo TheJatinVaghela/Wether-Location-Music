@@ -108,9 +108,9 @@ grid-template-rows: 1fr 3fr 1fr;
 
 
 }
-#Home_Trand_Feed_Wrapper{
+/* #Home_Trand_Feed_Wrapper{
 /* background-color: aquamarine; */
-}
+/* } */
 #First_Ul_OF_Left{
 background-color: rgb(231, 255, 247);
 /* background-color: transparent; */
@@ -200,7 +200,7 @@ background-color: rgb(231, 255, 247);
 #Mid_Side{
    
    background: aqua;
-  
+   overflow-y: scroll;
 }
 #Opning_BTN_wrapper{
    display: flex;
@@ -267,7 +267,7 @@ background-color: rgb(231, 255, 247);
    background-color: #dddddd;
  }
  .SONG_INFOS_Same_Font_Size{
-   font-size: clamp(.5rem, 1rem + 1.3333vw, 3rem);
+   font-size:clamp(.5rem, 1rem + .7vw, 4rem);
  }
 
 /* #Main_Mid{
@@ -311,7 +311,7 @@ background-color: rgb(231, 255, 247);
    padding: 3%;
    background-color: whitesmoke;
    border-collapse: collapse;
-   border-radius: 30%;
+   border-radius: 3%;
    display: flex;
    align-items: center;
 }
