@@ -13,8 +13,12 @@
 }
 
 .KO > #Mid_Side > .C > #Opning_BTN_wrapper > #Left_Side_Open_BTN{
-    display: initial;
+    display: contents;
     outline: 2px solid Pink;
+}
+.KO > #Mid_Side > .C > #Opning_BTN_wrapper > #Left_Side_Open_BTN > img {
+    width: clamp(1rem , 1rem + 1.3333vw, 7rem);
+    height: clamp(1rem , 1rem + 1.3333vw, 7rem)
 }
 .NO#Screen{
     grid-template-columns: 1.5fr 5fr;

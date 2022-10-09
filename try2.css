@@ -76,9 +76,14 @@ grid-template-rows: 1fr 3fr 1fr;
    justify-content: flex-end;
 }
 #Left_Side_Close_BTN{
+   display: contents;
    /* background-color: aquamarine; */
    float: right;
    
+}
+#Left_Side_Close_BTN > img{
+   width: clamp(1rem , 1rem + 1.3333vw, 7rem);
+    height: clamp(1rem , 1rem + 1.3333vw, 7rem);
 }
 #App_Name_Wrapper{
    display: flex;
