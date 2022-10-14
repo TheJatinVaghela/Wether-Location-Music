@@ -48,13 +48,17 @@ body{
 #Right_Side{
    
    background: transparent;
-   
+   max-width: 30%;
 }
-
+.Right_XX{
+   position: absolute;
+    right: 10%;
+}
 
 /* ================   LEFT SIDE  */
 #Left_Side{
 grid-template-rows: 1fr 3fr 1fr;
+max-width: 30%;
 }
 #Left_Side> *{
    width: 90%;
@@ -397,8 +401,10 @@ background-color: rgb(231, 255, 247);
  #Screen{
       width: 100%;
       height: 100%;
-      display: grid;
-      grid-template-columns:1.5fr 5fr 2.5fr;
+      display: flex;
+      /* grid-template-columns:1.5fr 5fr 2.5fr; */
+      flex-grow: 1;
+      flex-direction: row;
       border: 2px solid red;
      overflow-x: scroll;
     }

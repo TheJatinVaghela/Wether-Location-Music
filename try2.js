@@ -1,12 +1,13 @@
 // left side = non
 
 
+let Right_Side = document.getElementById("Right_Side");
+Right_Side.style.display = "none"
 function close_LEFT(){
   
-    let Right_Side = document.getElementById("Right_Side");
     let SCreen = document.getElementById("Screen");
     if (SCreen.className == "NO") {
-      Right_Side.style.display="flex"
+      // Right_Side.style.display="flex"
         SCreen.classList.replace("NO","KO");
        
       }
@@ -20,7 +21,21 @@ function close_LEFT(){
 
 
 
+let Right_Side_Open_BTN = document.getElementsByClassName("Right_Side_Open_BTN");
+let Right_XX = document.getElementsByClassName("Right_XX");
+Right_XX[0].addEventListener("click",(e)=>{
+  Right_Side.style.display="none";
+  Right_Side_Open_BTN[0].style.display = "block";
+  // Right_XX.style.display="block";
+})
 
+console.log(Right_Side_Open_BTN);
+Right_Side_Open_BTN[0].addEventListener("click", (e)=>{
+  if(Right_Side.style.display="none"){
+    Right_Side.style.display="flex";
+    e.target.style.display="none";
+  }
+})
 
 function search_Value(){
     
