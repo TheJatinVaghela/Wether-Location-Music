@@ -52,7 +52,8 @@ body{
 }
 .Right_XX{
    position: absolute;
-    right: 10%;
+   right: 9%;
+   top: 4%;
 }
 
 /* ================   LEFT SIDE  */
@@ -289,12 +290,13 @@ background-color: rgb(231, 255, 247);
 #Right_Side > .C{
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
-
+    isolation: isolate;
 }
 #Shortcut_Tag_Wrapper{
    display: flex;
    justify-content: space-between;
    flex-direction: column;
+   margin-top: 8%;
 }
 
 #Shortcut_h1{
