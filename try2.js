@@ -28,7 +28,7 @@ console.log(Right_Side_Open_BTN);
 Right_Side_Open_BTN[0].addEventListener("click", (e) => {
   if ((Right_Side.style.display = "none")) {
     Right_Side.style.display = "flex";
-    e.target.style.display = "none";
+    // e.target.style.display = "none";
   }
 });
 

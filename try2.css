@@ -74,11 +74,11 @@ max-width: 30%;
    grid-template-rows: 1fr 1fr;
 }
 #Loeading_BTN_wrapper{
-   border-bottom: 2px solid red;
    display: flex;
    align-items: center;
    flex-direction: row;
-   justify-content: flex-end;
+   justify-content: center;
+   width: 50%;
 }
 #Left_Side_Close_BTN{
    display: contents;
