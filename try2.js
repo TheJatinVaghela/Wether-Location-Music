@@ -8,7 +8,7 @@ function close_LEFT() {
     // Right_Side.style.display="flex"
     SCreen.classList.replace("NO", "KO");
   } else if (SCreen.className == "KO") {
-    Right_Side.style.display = "none";
+    // Right_Side.style.display = "none";
 
     SCreen.classList.replace("KO", "NO");
   }
@@ -28,8 +28,11 @@ console.log(Right_Side_Open_BTN);
 Right_Side_Open_BTN[0].addEventListener("click", (e) => {
   if ((Right_Side.style.display = "none")) {
     Right_Side.style.display = "flex";
-    // e.target.style.display = "none";
+    console.log(Right_Side_Open_BTN[0]);
+    Right_Side_Open_BTN[0].style.display = "none";
+    
   }
+
 });
 
 function search_Value() {
